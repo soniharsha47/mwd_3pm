@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch API data which is in form of array</title>
+</head>
+<body>
+    
+       
+
+            <table border="2">
+        <tr>
+            <th>postId</th>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>body</th>
+        </tr>
+        <tr>
+            <th id="postId"></th>
+            <th id="id"></th>
+            <th id="name"></th>
+            <th id="email"></th>
+            <th id="body"></th>
+        </tr>
+    </table>
+    <script>
+            async function api(){
+                var ap = await fetch("https://jsonplaceholder.typicode.com/comments")
+                var dat= await ap.json();
+
+                // for(let i=0 ;i<dat.length;i++){
+                //     console.log(dat[i]["name"]);
+                // }
+                for(let i = 0;i<dat.length;i++){
+                    
+                    document.getElementById("postId").innerHTML=dat[0].postId;
+                    document.getElementById("id").innerHTML=dat[1].id;
+                    document.getElementById("name").innerHTML=dat[2].name;
+                    document.getElementById("email").innerHTML=dat[3].email;
+                    document.getElementById("body").innerHTML=dat[4].body;
+                    
+                 }
+            }
+
+            
+            
+        
+
+        api();
+    </script>
+
+</body>
+</html>

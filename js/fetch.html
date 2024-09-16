@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+    <h1>Get data from another server</h1>
+    <table border="2">
+        <tr>
+            <th>Id</th>
+            <th>Advcie</th>
+        </tr>
+        <tr>
+            <th id="id"></th>
+            <th id="advice"></th>
+        </tr>
+    </table>
+
+    <script>
+
+        async function apii(){
+         
+            var api = await fetch("https://api.adviceslip.com/advice")
+            var data = await api.json();
+
+            console.log(data)
+            document.getElementById("id").innerHTML = data.slip.id;
+            document.getElementById("advice").innerHTML = data.slip.advice;
+        }
+
+        apii();
+
+    </script>
+    
+</body>
+</html>

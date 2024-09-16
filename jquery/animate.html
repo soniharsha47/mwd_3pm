@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Slider</title>
+    <style>
+        *{margin: 0;overflow: hidden;}
+        .container{
+            border: 2px s;
+            background-color: gray;
+            overflow: hidden;
+        }
+        .box1, .box2, .box3 {
+            height: 200px;
+            width: 100vw;
+            position: absolute;
+        }
+        .box2 , .box2 ,.box3{
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box1" style="background-color: pink;">
+            <button id="box1">click</button>
+        </div>
+        <div class="box2" style="background-color: purple;">
+            <button id="box2">click</button>
+        </div>
+        <div class="box3" style="background-color: blue;">
+            <button id="box3">click</button>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#box3').click(()=>{
+                $('.box3').animate({left:"100%"})
+                $('.box2').animate({left:0})
+            })
+            $('#box2').click(()=>{
+                $('.box2').animate({left:"100%"})
+            })
+            $('#box1').click(()=>{
+                $('.box1').animate({left:"100%"})
+                $('.box3').animate({left:0})
+            })
+        })
+    </script>
+    
+</body>
+</html>

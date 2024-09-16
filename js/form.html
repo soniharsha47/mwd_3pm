@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form name="formm" onsubmit="return valid()"  >
+        <input type="text" id="uname" />
+        <span id="uerr"></span>
+        <input type="password" id="passw" />
+        <input type="number" id="qnt" />
+        <input type="submit" />
+    </form>
+    
+    <script>
+           function valid() {
+                // console.log(document.forms['formm']['uname'].value)
+                var uname = document.forms['formm']['uname'].value;
+                var passw = document.forms['formm']['passw'].value;
+                var qnt = document.forms['formm']['qnt'].value;
+
+                var upper = passw.match(/[A-Z]/g)
+                var lower = passw.match(/[a-z]/g)
+                var digit = passw.match(/[0-9]/g)
+                var sp = passw.match(/[!-.:-@[-`{-~]/g)
+
+                // console.log(uname , passw);
+                if(uname==''){
+                    // alert("Please enter your username!!!!");
+                    document.getElementById('uerr').innerHTML='Please enter your name!!!'
+                    return false;
+                }
+                else if(uname.length<2){
+                    alert('Name should be 2 or more character!!!!');
+                    return false;
+                }
+                else if(passw==''){
+                    alert("Please enter your password!!!!");
+                    return false;
+                }
+                else if(upper==null){
+                    alert("No uppercase letters")
+                    return false;
+                }
+                else if(lower==null){
+                    alert("No lowercase letters")
+                    return false
+                }
+                else if(digit==null){
+                    alert("No digits")
+                    return false
+                }
+                else if(sp==null){
+                   alert('No special chracter')
+                   return false;
+                }
+                else if(qnt<=0){
+                    alert('Quantity shoule be 1 or more');
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+    </script>
+</body>
+</html>

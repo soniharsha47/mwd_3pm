@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telphone</title>
+</head>
+<body>
+    <script>
+        var telnum ="954674$%63276534";
+        var lower = telnum.match(/[a-z]/g);
+        var upper = telnum.match(/[A-Z]/g);
+        var sp = telnum.match(/[!-.:-@[-`{-~]/g);
+
+        if( telnum.length==10  & (lower==null | upper ==null || sp==null)){
+            document.write("valid telnum");
+        }
+        else if(telnum.length<10 | telnum.length>10  ){
+            document.write("invaild telnum");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>url validation using search</h1>
+    <script>
+
+        // document.write(emaill.search('@'))
+        var url ="httpswww.amazon.in://"
+       
+        var before = url.search('://')-1
+        var after = url.search('://') + 3
+
+        document.write(url[before], url[after]+'<br/>')
+
+        if(url=='' | url[before]==undefined | url[after]==undefined){
+            document.write('Invalid url')
+        }
+       
+        else{
+            document.write('Valid url')
+        }
+        
+
+        // url -> :// -> https://www.amazon.in
+    </script>
+    
+</body>
+</html>

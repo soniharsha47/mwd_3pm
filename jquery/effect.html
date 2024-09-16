@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide & show & toggle</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <button>click me</button>
+    <button class="show">click to show</button>
+    <button class="toggle"> click to toggle </button>
+    <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odio tenetur modi ut consectetur sed earum quas, magnam error perferendis facilis tempore ducimus atque similique? Corrupti voluptatibus fuga optio magnam molestiae, voluptas illum, earum consectetur veritatis quisquam laudantium aliquam eligendi laboriosam nobis rem incidunt. Itaque, doloribus, qui reprehenderit explicabo quod sit ipsam tempora culpa repudiandae, vero quibusdam? In optio atque officiis? Harum, dignissimos aliquam dolores quibusdam optio eum ratione? Eius ab esse aperiam hic repudiandae autem quia optio quibusdam delectus est repellat omnis ducimus, quaerat molestias, qui adipisci laudantium, beatae vitae corporis voluptatibus ut voluptates. Nulla dolor dolorem laudantium, itaque facere tempora ipsa sunt mollitia dicta accusantium nisi reprehenderit necessitatibus modi sit quam id quos esse consequatur architecto quibusdam omnis odit? Quo assumenda dignissimos qui dolorum, tenetur recusandae praesentium ad deleniti quasi expedita molestiae explicabo illo aliquid eos eaque provident atque in dicta distinctio nihil. Voluptate non, reprehenderit saepe dolore, tempora voluptatibus commodi earum perspiciatis temporibus ipsa inventore voluptates, est nesciunt repellat? Dignissimos velit earum, fuga doloribus doloremque iusto officia maxime. Tempore, non debitis iure et rem nam minima, dolores deserunt necessitatibus aspernatur unde nulla eius reprehenderit. Minus sunt laudantium quasi aperiam minima incidunt provident excepturi fugiat totam mollitia! Dolorum.</div>
+     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus tempore repudiandae accusantium commodi voluptate inventore eaque magni cupiditate aliquam hic error consectetur, consequuntur perferendis vitae obcaecati. Consectetur, laudantium quae exercitationem obcaecati incidunt dolor. Sint neque, delectus fugit dicta totam illum maxime quibusdam voluptatum eligendi aperiam eveniet dolor, ducimus nam dignissimos nobis doloribus dolorum, ipsam praesentium et corporis. Vel, quas? Ex illum autem mollitia qui voluptates temporibus quis voluptatum magni repudiandae doloribus quod eligendi sunt consectetur, velit numquam, itaque impedit soluta sit libero! Sapiente adipisci nam, cumque quod, expedita officiis provident dolorum aliquid illo ex amet consequuntur dignissimos vero deserunt modi tempora molestias! Voluptate recusandae cumque consequatur ipsa corrupti rerum sequi doloremque assumenda ab, rem eum reprehenderit ad debitis vitae doloribus, tempora at aliquid et! Velit sit delectus nemo hic sunt quia optio enim, nesciunt facere voluptatum numquam iure. Quam, quidem explicabo minus provident est nihil nostrum! Minima, deserunt labore soluta excepturi delectus tenetur ipsum veniam unde rem quis culpa accusamus. Necessitatibus odit atque, officiis dolor ipsa sunt deserunt, animi consectetur sint pariatur obcaecati, sequi iure repellat reiciendis nesciunt eaque rerum velit maiores? Eos quod provident eaque libero, ad ratione nulla, hic omnis culpa ducimus dignissimos accusantium ea saepe sed rerum. Consequatur dolorum dolor, molestias dolores a, natus dicta repellat iste placeat voluptatum sed ea. Harum, accusamus soluta facere omnis unde itaque blanditiis at voluptatem! Inventore odio, quisquam dolorem optio culpa saepe provident vero eligendi consequuntur laudantium repudiandae architecto laborum expedita consequatur officia qui esse recusandae reiciendis! Cupiditate ipsam animi aliquam unde magni minima natus minus, inventore consequatur vero officiis praesentium deserunt voluptatum velit quis harum odio sit nisi debitis accusamus eligendi dolorum reiciendis libero? Quidem nihil delectus ipsum corrupti repudiandae, voluptas consectetur quasi, rem dolores odit autem iste commodi. Consequatur eaque exercitationem enim blanditiis eligendi? Numquam tempore inventore, illo hic quam sapiente repellendus recusandae minus sit distinctio quis odio cumque vitae, ut explicabo sint soluta totam libero. Ipsa sit, aspernatur accusamus rem mollitia facere officia corporis vel pariatur obcaecati laudantium eligendi officiis facilis sint commodi illum amet provident minima vero fugit perferendis id soluta voluptatibus. Pariatur blanditiis non ut, neque voluptatibus nobis accusamus facere et eum debitis est rerum minima quisquam placeat sequi nostrum quam quod. Blanditiis, reprehenderit eaque ipsum itaque similique nostrum facere deleniti. Nobis sapiente, velit blanditiis, ducimus libero beatae minima expedita cumque nesciunt modi, architecto soluta est dignissimos reprehenderit nam. Nam nulla non deleniti! Exercitationem animi ea similique esse sit, eum ad non iure quia repudiandae cum ab harum molestias consectetur, a architecto. Deserunt, in quisquam? Ut ad id quae porro odio, accusantium ipsam ipsum eum velit eaque, incidunt voluptatum magni cupiditate! Distinctio atque corporis esse aliquid rerum aliquam! Hic, suscipit architecto. Distinctio delectus ducimus quis id? Reiciendis praesentium soluta eius tempora, expedita ipsa magni, et temporibus debitis dignissimos, consequuntur laborum. Laborum iste cupiditate corrupti quod libero vitae minus illum cumque mollitia repellat exercitationem, sint ipsum quam. Laboriosam, adipisci explicabo! Accusantium et dolorem laborum similique facere suscipit delectus dolorum laboriosam, harum odit expedita! Omnis magni distinctio sequi.</p>
+
+    <script>
+
+      
+        $(document).ready(()=>{
+
+            $('.para').hide()
+
+            $('button').click(()=>{
+                $('.para').hide();
+            })
+
+            $('.show').click(()=>{
+                $('.para').show()
+            })
+
+            $('.toggle').click(()=>{
+                $('.para').toggle()
+            })
+
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match strings</title>
+</head>
+<body>
+    <h1>Match </h1>
+    <script>
+
+        var st = 'Gh52(ijdekcfm*)'
+
+        // console.log(st.match(/[A-Z]/g))
+        var upper = st.match(/[A-Z]/g)
+        var lower = st.match(/[a-z]/g)
+        var digit = st.match(/[0-9]/g)
+        var sp = st.match(/[!-.:-@[-`{-~]/g)
+        // document.write(upper, lower, digit, sp)
+
+        if(st.length<8){
+            document.write("Password is too short")
+        }
+        else if(upper==null){
+            document.write("No uppercase letters")
+        }
+        else if(lower==null){
+            document.write("No lowercase letters")
+        }
+        else if(digit==null){
+            document.write("No digits")
+        }
+        else if(sp==null){
+            document.write('No special chracter')
+        }
+        else{
+            document.write('Valid password')
+        }
+
+        // regex -> regular expressions -> /[A-Z]/g
+        // telephone -> only digits & length should be 10 digit
+    </script>
+</body>
+</html>
